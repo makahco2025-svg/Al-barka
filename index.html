@@ -165,9 +165,9 @@
         const HomePage = ({ onNavigate, onAddToCart, onProductClick }) => {
             const [currentSlide, setCurrentSlide] = useState(0);
             const slides = [
-                { id: 1, image: 'https://picsum.photos/seed/spices1/1920/600', title: 'توابل طبيعية 100%', subtitle: 'من أفضل المزارع حول العالم مباشرة إلى مائدتك', cta: 'تسوق الآن' },
-                { id: 2, image: 'https://picsum.photos/seed/herbs2/1920/600', title: 'الأعشاب العطرية', subtitle: 'انعم برائحة ونكهة الأعشاب الطازجة في كل وجبة', cta: 'اكتشف المزيد' },
-                { id: 3, image: 'https://picsum.photos/seed/offer3/1920/600', title: 'عروض حصرية', subtitle: 'خصم يصل إلى 30% على تشكيلتنا المميزة', cta: 'شاهد العروض' },
+                { id: 1, image: 'https://www2.0zz0.com/2025/10/28/17/682261463.jpg', title: 'توابل طبيعية 100%', subtitle: 'من أفضل المزارع حول العالم مباشرة إلى مائدتك', cta: 'تسوق الآن' },
+                { id: 2, image: 'https://www2.0zz0.com/2025/10/28/17/813398050.jpg', title: 'الأعشاب العطرية', subtitle: 'انعم برائحة ونكهة الأعشاب الطازجة في كل وجبة', cta: 'اكتشف المزيد' },
+                { id: 3, image: 'https://www2.0zz0.com/2025/10/28/17/662436994.jpeg', title: 'عروض حصرية', subtitle: 'خصم يصل إلى 30% على تشكيلتنا المميزة', cta: 'شاهد العروض' },
             ];
             useEffect(() => { const timer = setInterval(() => setCurrentSlide((prev) => (prev + 1) % slides.length), 5000); return () => clearInterval(timer); }, [slides.length]);
             const goToSlide = (index) => setCurrentSlide(index);
@@ -223,10 +223,10 @@
         // New Offers Section Component
         const OffersSection = ({ onNavigate, onAddToCart, onProductClick }) => {
             const mockProducts = [
-                { id: 1, name: 'كمون بلدي', description: 'حبوب كمون بلدية طازجة.', image: 'https://picsum.photos/seed/cumin/400/400', originalPrice: 25.00, discountedPrice: 20.00, weight: '250 جرام' },
-                { id: 2, name: 'فلفل أسود خشن', description: 'فلفل أسود مجروش عالي الجودة.', image: 'https://picsum.photos/seed/pepper/400/400', originalPrice: 30.00, discountedPrice: 24.50, weight: '200 جرام' },
-                { id: 3, name: 'زعتر فلسطيني فاخر', description: 'خلطة زعتر فلسطينية تقليدية.', image: 'https://picsum.photos/seed/zaatar/400/400', originalPrice: 40.00, discountedPrice: 35.00, weight: '500 جرام' },
-                { id: 4, name: 'كركم مطحون', description: 'مسحوق كركم نقي للطبخ.', image: 'https://picsum.photos/seed/turmeric/400/400', originalPrice: 22.00, discountedPrice: 18.00, weight: '250 جرام' },
+                { id: 1, name: 'كمون بلدي', description: 'حبوب كمون بلدية طازجة.', image: 'https://www2.0zz0.com/2025/10/28/17/249899467.jpeg', originalPrice: 25.00, discountedPrice: 20.00, weight: '250 جرام' },
+                { id: 2, name: 'فلفل أسود خشن', description: 'فلفل أسود مجروش عالي الجودة.', image: 'https://www2.0zz0.com/2025/10/28/17/507873054.jpg', originalPrice: 30.00, discountedPrice: 24.50, weight: '200 جرام' },
+                { id: 3, name: 'زعتر فلسطيني فاخر', description: 'خلطة زعتر فلسطينية تقليدية.', image: 'https://www2.0zz0.com/2025/10/28/17/178415672.jpg', originalPrice: 40.00, discountedPrice: 35.00, weight: '500 جرام' },
+                { id: 4, name: 'كركم مطحون', description: 'مسحوق كركم نقي للطبخ.', image: 'https://www2.0zz0.com/2025/10/28/17/974722305.jpg', originalPrice: 22.00, discountedPrice: 18.00, weight: '250 جرام' },
             ];
             return (
                 <section className="py-12 bg-gradient-to-br from-red-50 to-emerald-50">
@@ -434,14 +434,14 @@
         const ProductsPage = ({ searchQuery, onSearchChange, onAddToCart, onProductClick }) => {
             const [activeCategory, setActiveCategory] = useState('all');
             const mockProducts = [
-                { id: 1, name: 'كمون بلدي', description: 'حبوب كمون بلدية طازجة، مثالية للأطباق الشرقية.', longDescription: 'كمون بلدي أصيل يتميز برائحته النفاذة وطعمه القوي.', image: 'https://picsum.photos/seed/cumin/400/400', originalPrice: 25.00, discountedPrice: 20.00, weight: '250 جرام', category: 'بهارات' },
-                { id: 2, name: 'فلفل أسود خشن', description: 'فلفل أسود مجروش عالي الجودة.', longDescription: 'أفضل أنواع الفلفل الأسود المجروش الذي يضيف لمسة من الحرارة.', image: 'https://picsum.photos/seed/pepper/400/400', originalPrice: 30.00, discountedPrice: 24.50, weight: '200 جرام', category: 'بهارات' },
-                { id: 3, name: 'زعتر فلسطيني فاخر', description: 'خلطة زعتر فلسطينية تقليدية بالسمسم والسماق.', longDescription: 'خلطة الزعتر الفلسطيني الفاخرة التي تأخذك في رحلة إلى التراث الأصيل.', image: 'https://picsum.photos/seed/zaatar/400/400', originalPrice: 40.00, discountedPrice: 35.00, weight: '500 جرام', category: 'أعشاب' },
-                { id: 4, name: 'كركم مطحون', description: 'مسحوق كركم نقي للطبخ والفوائد الصحية.', longDescription: 'مسحوق الكركم الذهبي، المعروف بـ "بهار الحياة".', image: 'https://picsum.photos/seed/turmeric/400/400', originalPrice: 22.00, discountedPrice: 18.00, weight: '250 جرام', category: 'بهارات' },
-                { id: 5, name: 'كزبرة جافة', description: 'حبوب كزبرة كاملة مجففة بعناية.', longDescription: 'حبوب الكزبرة الكاملة التي تطلق رائحة حمضية وزهرية عند طحنها.', image: 'https://picsum.photos/seed/coriander/400/400', originalPrice: 18.00, discountedPrice: 15.00, weight: '200 جرام', category: 'بهارات' },
-                { id: 6, name: 'أعواد قرفة سيلانية', description: 'قرفة سيلانية أصلية بنكهة حلوة ورقيقة.', longDescription: 'أعواد القرفة السيلانية الفاخرة، تتميز بطبقاتها الرقيقة.', image: 'https://picsum.photos/seed/cinnamon/400/400', originalPrice: 50.00, discountedPrice: 42.00, weight: '100 جرام', category: 'بهارات' },
-                {id: 7, name: 'حبة البركة (الحبة السوداء)', description: 'بذور حبة البركة النقية.', longDescription: 'بذور حبة البركة، المعروفة أيضًا بالحبة السوداء، ذات قيمة غذائية عالية.', image: 'https://picsum.photos/seed/nigella/400/400', originalPrice: 35.00, discountedPrice: 29.00, weight: '250 جرام', category: 'بذور' },
-                { id: 8, name: 'ورق غار (لورا)', description: 'أوراق غار مجففة عالية الجودة.', longDescription: 'أوراق الغار المجففة بعناية للحفاظ على رائحتها العطرية المميزة.', image: 'https://picsum.photos/seed/bayleaf/400/400', originalPrice: 15.00, discountedPrice: 12.50, weight: '50 جرام', category: 'أعشاب' },
+                { id: 1, name: 'كمون بلدي', description: 'حبوب كمون بلدية طازجة، مثالية للأطباق الشرقية.', longDescription: 'كمون بلدي أصيل يتميز برائحته النفاذة وطعمه القوي.', image: 'https://www2.0zz0.com/2025/10/28/17/956853445.jpeg', originalPrice: 25.00, discountedPrice: 20.00, weight: '250 جرام', category: 'بهارات' },
+                { id: 2, name: 'فلفل أسود خشن', description: 'فلفل أسود مجروش عالي الجودة.', longDescription: 'أفضل أنواع الفلفل الأسود المجروش الذي يضيف لمسة من الحرارة.', image: 'https://www2.0zz0.com/2025/10/28/17/703810590.jpg', originalPrice: 30.00, discountedPrice: 24.50, weight: '200 جرام', category: 'بهارات' },
+                { id: 3, name: 'زعتر فلسطيني فاخر', description: 'خلطة زعتر فلسطينية تقليدية بالسمسم والسماق.', longDescription: 'خلطة الزعتر الفلسطيني الفاخرة التي تأخذك في رحلة إلى التراث الأصيل.', image: 'https://www2.0zz0.com/2025/10/28/17/743889543.jpg', originalPrice: 40.00, discountedPrice: 35.00, weight: '500 جرام', category: 'أعشاب' },
+                { id: 4, name: 'كركم مطحون', description: 'مسحوق كركم نقي للطبخ والفوائد الصحية.', longDescription: 'مسحوق الكركم الذهبي، المعروف بـ "بهار الحياة".', image: 'https://www2.0zz0.com/2025/10/28/17/974722305.jpg', originalPrice: 22.00, discountedPrice: 18.00, weight: '250 جرام', category: 'بهارات' },
+                { id: 5, name: 'كزبرة جافة', description: 'حبوب كزبرة كاملة مجففة بعناية.', longDescription: 'حبوب الكزبرة الكاملة التي تطلق رائحة حمضية وزهرية عند طحنها.', image: 'https://www2.0zz0.com/2025/10/28/17/982588914.jpg', originalPrice: 18.00, discountedPrice: 15.00, weight: '200 جرام', category: 'بهارات' },
+                { id: 6, name: 'أعواد قرفة سيلانية', description: 'قرفة سيلانية أصلية بنكهة حلوة ورقيقة.', longDescription: 'أعواد القرفة السيلانية الفاخرة، تتميز بطبقاتها الرقيقة.', image: 'https://www2.0zz0.com/2025/10/28/17/182121488.jpg', originalPrice: 50.00, discountedPrice: 42.00, weight: '100 جرام', category: 'بهارات' },
+                {id: 7, name: 'حبة البركة (الحبة السوداء)', description: 'بذور حبة البركة النقية.', longDescription: 'بذور حبة البركة، المعروفة أيضًا بالحبة السوداء، ذات قيمة غذائية عالية.', image: 'https://www2.0zz0.com/2025/10/28/17/331936330.jpg', originalPrice: 35.00, discountedPrice: 29.00, weight: '250 جرام', category: 'بذور' },
+                { id: 8, name: 'ورق غار (لورا)', description: 'أوراق غار مجففة عالية الجودة.', longDescription: 'أوراق الغار المجففة بعناية للحفاظ على رائحتها العطرية المميزة.', image: 'https://www2.0zz0.com/2025/10/28/17/831031934.jpg', originalPrice: 15.00, discountedPrice: 12.50, weight: '50 جرام', category: 'أعشاب' },
             ];
             const categories = [...new Set(mockProducts.map(product => product.category))];
             const filteredProducts = mockProducts.filter(product => {
@@ -519,3 +519,4 @@
     </script>
 </body>
 </html>
+
